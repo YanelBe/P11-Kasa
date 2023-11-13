@@ -1,0 +1,47 @@
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.tag-wrap {
+    display: flex;
+}
+
+.tag-button {
+    @include flex-center;
+    @include border-radius-small;
+    @include font(14px, 500);
+    background: $primary-color;
+    color: $tertiary-color;
+    height: 25px;
+    margin-right: 12px;
+    padding: 6px 20px;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        @include font(10px, 500);
+        height: 18px;
+        padding: 6px 12px;
+    }
+}
+
+.housing-title-container {
+
+    h1 {
+        @include font(36px, 500);
+        margin: 0;
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            @include font(18px, 500);
+        }
+    }
+
+    h3 {
+        @include font(18px, 500);
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            @include font(14px, 500);
+        }
+    }
+}
+

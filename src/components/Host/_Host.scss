@@ -1,0 +1,62 @@
+.housing-detail-container {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	width: 100%;
+	justify-content: space-between;
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.host-container {
+	@include flex-end;
+	width: 100%;
+}
+
+.host-profile-picture {
+	display: flex;
+	width: 64px;
+	height: 64px;
+	margin-left: 16px;
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		width: 32px;
+		height: 32px;
+	}
+
+	& img {
+		@include width-height-max;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}
+
+.host-name {
+	@include flex-end;
+	@include font(18px, 500);
+	width: 100px;
+	height: 50px;
+	text-align: right;
+	color: $primary-color;
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		@include font(12px, 500);
+
+	}
+}
+
+.host-rating-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+

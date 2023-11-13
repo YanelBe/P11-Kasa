@@ -1,0 +1,24 @@
+.nav-header {
+	@include flex-end;
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		text-transform: uppercase;
+	}
+
+	&__link-home,
+	&__link-about {
+		@include font(24px, 500);
+		color: $primary-color;
+		padding-left: 4rem;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration-line: underline;
+		}
+
+		@media screen and (max-width: $breakpoint-desktop) {
+			@include font(12px, 500);
+			padding-left: 0.8rem;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.error-container {
+	@include flex-column;
+	color: $primary-color;
+	margin: 22px 6%;
+}
+
+.error-number {
+	@include flex-center;
+	@include font(288px, 700);
+	margin: 0;
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		@include font(96px, 700);
+		
+	}
+}
+
+.error-text {
+	@include font(36px, 500);
+	text-align: center;
+	margin: 10%;
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		@include font(18px, 500);
+		margin: 20%;
+	}
+}
+
+.error-redirect {
+	@include font(18px, 500);
+	color: $primary-color;
+	text-align: center;
+	text-decoration: none;
+	margin: 10%;
+
+	&:hover {
+		text-decoration-line: underline;
+	}
+
+	@media screen and (max-width: $breakpoint-desktop) {
+		@include font(14px, 500);
+	}
+}

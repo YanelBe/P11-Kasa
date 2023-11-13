@@ -1,0 +1,40 @@
+.banner {
+    @include border-radius-medium;
+    height: 223px;
+    margin-bottom: 38px;
+    position: relative;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+      @include border-radius-small;
+      height: 111px;
+    }
+  
+    &__img {
+      @include border-radius-medium;
+      @include width-height-max;
+      object-fit: cover;
+      
+      @media screen and (max-width: $breakpoint-desktop) {
+        @include border-radius-small;
+        height: 111px;
+      }
+    }
+
+    &__text {
+      inset: 0;
+      @include flex-center;
+      @include width-height-max;
+      @include font(48px, 500);
+      color: $tertiary-color;
+      position: absolute;
+      
+      @media screen and (max-width: $breakpoint-desktop) {
+        @include font(24px, 400);
+        width: 217px;
+        height: 48px;
+        inset: 30% 0 0 10%;
+        line-height: 100%;
+      }
+    }
+  }
+  

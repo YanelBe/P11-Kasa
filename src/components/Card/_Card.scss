@@ -1,0 +1,61 @@
+.card-housing {
+    @include border-radius-small;
+    display: flex;
+    position: relative;
+    width: 340px;
+    height: 340px;
+    transition: transform .3s;
+
+    &:hover {
+		@include hover-zoom;
+	}
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        width: 335px;
+        height: 255px;
+    }
+
+    & img {
+        @include border-radius-small;
+        display: flex;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        @include font(18px, 500);
+        color: $secondary-color;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__gradient {
+        @include width-height-max;
+        @include border-radius-small;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        background: $card-gradient;
+    }
+}
+
+.card-container {
+    @include border-radius-medium;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $secondary-color;
+    padding: 5% 0;
+    margin: 50px 0;
+    gap: 50px;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        @include border-radius-small;
+        margin: 22px 0;
+        gap: 20px;
+        background-color: $tertiary-color;
+    }
+}
